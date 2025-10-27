@@ -146,12 +146,13 @@
             width: 100%;
         }
         header img{object-fit: cover; object-position: 0 30%;}
-        
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+        .fade-in.show { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-blue-900 py-10">
+    <header class="bg-blue-900 py-10 fade-in">
         <div class="container flex flex-col items-center text-center">
             <img class="w-28 h-28 rounded-full shadow-lg border-2 border-white mb-4" src="images/my_image.jpeg" alt="Ankita Chatterjee Profile Picture">
             
@@ -189,7 +190,7 @@
             </div>
             <!-- Download CV Button Section -->
             <div class="mt-8">
-                <a href="https://drive.google.com/file/d/1ZI-PbLEJsG1v7Hl6MFkftPT_doaioUKw/view?usp=drive_link" download="Ankita-Chatterjee-CV.pdf" target="_blank" class="font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out flex items-center justify-center stylish-button">
+                <a href="https://drive.google.com/file/d/14lXaLfZC8SFecYqhBr03DjqCD8KaBCeT/view?usp=drive_link" download="Ankita-Chatterjee-CV.pdf" target="_blank" class="font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out flex items-center justify-center stylish-button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="0.75" class="bi bi-download" viewBox="0 0 24 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                         <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
@@ -203,7 +204,7 @@
 
     <main class="container py-12">
         <!-- about me -->
-        <section class="mb-12">
+        <section class="mb-12 fade-in">
             <h2 class="section-title">About Me</h2>
             <p class="text-lg text-gray-700 leading-relaxed mb-4">
                 Motivated and detail-oriented Data Analyst pursuing an MCA at MAKAUT University. Skilled in data visualization, machine learning, and web development, with hands-on experience in Power BI, Tableau, Excel, Python, and SQL. Completed real-world projects and internships where I built interactive dashboards, predictive systems, and responsive websites. Passionate about turning data into actionable insights and delivering impactful business solutions.
@@ -212,7 +213,7 @@
 
         <!-- intership & education-->
         <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <section class="bg-blue-50 p-6 rounded-lg">
+            <section class="bg-blue-50 p-6 rounded-lg fade-in">
                 <h2 class="section-title">Internship</h2>
                 <div class="space-y-4">
                     <div class="card">
@@ -245,7 +246,7 @@
                 </div>
             </section>
             
-            <section class="bg-blue-50 p-6 rounded-lg">
+            <section class="bg-blue-50 p-6 rounded-lg fade-in">
                 <h2 class="section-title">Education</h2>
                 <div class="space-y-4">
                     <div class="card">
@@ -269,7 +270,7 @@
         </div>
         
         <!-- projects -->
-        <section class="mb-12">
+        <section class="mb-12 fade-in">
             <h2 class="section-title">Projects</h2>
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-6">
@@ -336,7 +337,7 @@
         </section>
 
         <!-- cetrtification -->
-        <section class="mb-12 bg-blue-50 p-6 rounded-lg">
+        <section class="mb-12 bg-blue-50 p-6 rounded-lg fade-in">
             <h2 class="section-title">Certifications & Seminars</h2>
             <div class="owl-carousel mt-6">
                 <div class="item">
@@ -433,39 +434,30 @@
         </section> -->
 
         <!-- skill expertise hobby -->
-        <section class="mb-12">
+        <section class="mb-12 fade-in">
             <h2 class="section-title">Skills , Expertise & Hobbies</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="card">
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Technical Skills</h3>
                     <div class="flex flex-wrap gap-2">
-                        <h4 class="text-l font-semibold text-gray-900 mb-4">
-                            Data Tools :
-                        </h4>
+                        <span class="skill-item">Adv MS Excel</span>
                         <span class="skill-item">Power BI</span>
-                        <span class="skill-item">Tableau</span>
                         <span class="skill-item">MySQL</span>
-                        <span class="skill-item">Excel</span>
                         <span class="skill-item">Python</span>
-                        <h4 class="text-l font-semibold text-gray-900 mb-4">
-                            Web Development :
-                        </h4>
+                        <span class="skill-item">Tableau</span>
+                        <span class="skill-item">Machine Learning</span>
+                        <span class="skill-item">DSA</span>
+                        <span class="skill-item">Statistics (Basic)</span>
                         <span class="skill-item">HTML</span>
                         <span class="skill-item">CSS</span>
                         <span class="skill-item">JavaScript</span>
                         <span class="skill-item">PHP</span>
-                        <span class="skill-item">WordPress/WooCommerce</span>
-                        <h4 class="text-l font-semibold text-gray-900 mb-4">
-                            Programming languages : 
-                        </h4>
                         <span class="skill-item">C</span>
                         <span class="skill-item">C++</span>
-                        <span class="skill-item">Java (basic)</span>
+                        <span class="skill-item">Java (Basic)</span>
                         <span class="skill-item">Node.js</span>
                         <span class="skill-item">Angular</span>
-                        <h4 class="text-l font-semibold text-gray-900 mb-4">
-                            Other Tools :
-                        </h4>
+                        <span class="skill-item">WordPress/WooCommerce</span>
                         <span class="skill-item">VSCode</span>
                         <span class="skill-item">MySQL Workbench</span>
                         <span class="skill-item">Sublime Text</span>
@@ -492,7 +484,7 @@
         
         <!-- contact me -->
         <div class="flex-container">
-            <section class="flex-1">
+            <section class="flex-1 fade-in">
                 <h2 class="section-title">Contact Me</h2>
                 <div class="card p-8 rounded-lg shadow-md flex-1">
                     <p class="text-gray-700 mb-4 text-center sm:text-left">
@@ -539,7 +531,6 @@
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
                 const isExpanded = content.classList.contains('hidden');
-                
                 // Close all other accordions in the same group
                 const parentCard = button.closest('.card');
                 parentCard.querySelectorAll('div > button').forEach(siblingButton => {
@@ -554,7 +545,6 @@
                 button.setAttribute('aria-expanded', isExpanded);
             });
         });
-
         // Continuous scrolling carousel
         var owl = $('.owl-carousel');
         owl.owlCarousel({
@@ -584,7 +574,6 @@
             }
             e.preventDefault();
         });
-
         // Scroll to top button functionality
         window.onscroll = function() {
             var scrollBtn = document.getElementById("scroll-to-top-btn");
@@ -594,18 +583,30 @@
                 scrollBtn.classList.remove("show");
             }
         };
-
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         }
+        // Fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const options = { threshold: 0.2 };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+        faders.forEach(fader => appearOnScroll.observe(fader));
     </script>
 
 </body>
 
 </html>
+
 
 
 
